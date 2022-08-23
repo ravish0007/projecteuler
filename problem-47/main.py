@@ -11,7 +11,7 @@ import itertools
 
 
 def four_consecutive_numbers(start):
-    return ([i, i+1, i+2, i+3] for i in itertools.count(start))
+    return ((i, i+1, i+2, i+3) for i in itertools.count(start))
 
 
 # Hello problem-3, doesn't work for 0, 1 
