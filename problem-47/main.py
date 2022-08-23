@@ -10,8 +10,8 @@ import itertools
 #        local_number += 1
 
 
-four_consecutive_numbers = lambda start: ([number, number+1, number+2, number+3] 
-                           for number in itertools.count(start))
+def four_consecutive_numbers(start):
+    return ([i, i+1, i+2, i+3] for i in itertools.count(start))
 
 
 # Hello problem-3, doesn't work for 0, 1 
