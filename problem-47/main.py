@@ -32,12 +32,20 @@ def get_prime_factors(number):
 
     return prime_factors
 
+#def has_distinct_prime_factors(numbers, length):
+
+#    return all((len(set(factors)) 
+#    for each_number in numbers:
+#        factors = get_prime_factors(each_number)
+#        if len(set(factors)) = length:  # distinct, final piece
+#            return False
+#    return True
+
+
+
 def has_distinct_prime_factors(numbers, length):
-    for each_number in numbers:
-        factors = get_prime_factors(each_number)
-        if len(set(factors)) != length:  # distinct, final piece
-            return False
-    return True
+    return all(len(set(get_prime_factors(num))) == length for num in numbers)
+
 
 
 for numbers in four_consecutive_numbers(start=1):
