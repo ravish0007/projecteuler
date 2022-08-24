@@ -1,20 +1,17 @@
 import math  
 import itertools
 
-#def four_consecutive_number_generator(start=0):
-#    local_number = start
-#    while True:
-
-#        yield [local_number, local_number + 1,
-#               local_number + 2, local_number + 3]
-#        local_number += 1
-
-
 def four_consecutive_numbers(start):
     return ((i, i+1, i+2, i+3) for i in itertools.count(start))
 
-
 # Hello problem-3, doesn't work for 0, 1 
+# def get_prime_factors(number):
+
+#     return ((2,) * (number//2))
+#           + (x if number%x == 0 for x in range(3,  int(math.sqrt(number)), 2))
+#           + (number%2,) if number%2 > 2 else ()
+          
+
 def get_prime_factors(number):
     prime_factors = []
 
@@ -31,16 +28,6 @@ def get_prime_factors(number):
         prime_factors.append(number)
 
     return prime_factors
-
-#def has_distinct_prime_factors(numbers, length):
-
-#    return all((len(set(factors)) 
-#    for each_number in numbers:
-#        factors = get_prime_factors(each_number)
-#        if len(set(factors)) = length:  # distinct, final piece
-#            return False
-#    return True
-
 
 
 def has_distinct_prime_factors(numbers, length):
