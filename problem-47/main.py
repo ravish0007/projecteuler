@@ -14,12 +14,7 @@ def four_consecutive_numbers(start):
 
 def get_prime_factors(number):
     prime_factors = []
-
-    while number % 2 == 0:
-        number = number / 2
-        prime_factors.append(2)
-         
-    for index in range(3, int(math.sqrt(number)) + 1, 2):
+    for index in itertools.chain( range(2,3), range(3, int(math.sqrt(number)) + 1, 2)):
         while number % index == 0:
             prime_factors.append(index)
             number = number / index
